@@ -19,7 +19,7 @@ Ask Llama is an interactive question-answering application powered by Llama-base
     ```
 2. Install dependencies:
     ```bash
-    pip install -r requirements.txt
+    pip install -r requirement.txt
     ```
     Please note : You must have llama3.2:1b installed on your system. You can install it from the official ollama website.
 
