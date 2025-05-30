@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ask Llama</title>
+    <link rel="icon" type="image/png" href="images/favicon.webp" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>Ask Llama</h1>
+    <!-- Chatbox -->
+    <div class="container">
+        <div id="chatbox"
+            style="width: 75%; max-height: auto; overflow-y: auto; margin: 20px auto; border-radius: 10px; padding: 10px;">
+        </div>
+        <div class="text-input">
+            <div class="one">
+                <input id="userInput" type="text" placeholder="Ask anything..." class="input-box" autocomplete="off" />
+                <button onclick="sendMessage()" class="send-button">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
