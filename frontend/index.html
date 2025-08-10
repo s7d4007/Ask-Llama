@@ -10,6 +10,11 @@
 </head>
 
 <body>
+    <div class="theme-toggle">
+        <label for="themeSwitch">🌙</label>
+        <input type="checkbox" id="themeSwitch" aria-label="Toggle dark mode" />
+        <label for="themeSwitch">☀️</label>
+    </div>
     <h1>Ask Llama</h1>
     <!-- Chatbox -->
     <div class="container">
@@ -24,6 +29,25 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <script>
+    // Theme toggle logic
+    const themeSwitch = document.getElementById('themeSwitch');
+    const root = document.documentElement;
+    // Load theme from localStorage
+    if (localStorage.getItem('theme') === 'dark') {
+        root.setAttribute('data-theme', 'dark');
+        themeSwitch.checked = true;
+    }
+    themeSwitch.addEventListener('change', function() {
+        if (this.checked) {
+            root.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            root.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+    </script>
 </body>
 
 </html>
